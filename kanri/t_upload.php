@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品画像アップロード</title>
+    <link rel="stylesheet" href="kanri.css">
+</head>
+
+<body>
+    <div class="base">
+        <?php if ($error) echo "<span class=\"error\">$error</span>" ?>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <p>
+                商品画像（JPEGのみ）<br>
+                <input type="file" name="pic">
+            </p>
+            <p>
+                <input type="hidden" name="code" value="<?php echo $code ?>">
+                <input type="submit" value="追加" name="submit">
+            </p>
+        </form>
+    </div>
+    <div class="base">
+        <a href="index.php">一覧に戻る</a>
+    </div>
+</body>
+
+</html>
