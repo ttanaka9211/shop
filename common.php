@@ -3,7 +3,7 @@
   function connect()
   {
     try {
-      return new PDO("host=localhost;charset=utf8", "root");
+      return new PDO("mysql:dbname=shop;host=localhost;charset=utf8", "root", "root");
       echo "接続OK!";
     } catch (PDOException $e) {
       echo 'DB接続エラー！: ' . $e->getMessage();
