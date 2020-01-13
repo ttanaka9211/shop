@@ -9,6 +9,7 @@
 
 <body>
     <h1>Noodle Shop</h1>
+    <button onclick="location.href='kanri/index.php'">管理画面</button>
     <table>
         <?php foreach ($goods as $g) { ?>
             <tr>
